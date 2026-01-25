@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>放らぼ文化祭2026 公式参加規約ハンドブック</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Slate (Base), Rose (Prohibitions), Amber (Warnings), Indigo (System) -->
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; }
+        .glass-panel { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border: 1px solid rgba(226, 232, 240, 0.8); }
+        .nav-active { background-color: #f1f5f9; border-left: 4px solid #4f46e5; color: #1e293b; font-weight: bold; }
+        .chart-container { position: relative; width: 100%; max-width: 300px; margin: 0 auto; height: 250px; }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800 antialiased min-h-screen flex flex-col md:flex-row">
+
+    <!-- Sidebar Navigation -->
+    <aside class="bg-white w-full md:w-64 flex-shrink-0 border-r border-slate-200 md:h-screen md:sticky md:top-0 z-50 overflow-y-auto">
+        <div class="p-6 border-b border-slate-100">
+            <h1 class="text-xl font-black text-indigo-900 leading-tight">放らぼ文化祭<br><span class="text-indigo-500 text-sm font-medium">Digital Handbook</span></h1>
+            <p class="text-xs text-slate-400 mt-2">簡易ガイド版 (要約)</p>
+        </div>
+        <nav class="p-4 space-y-1">
+            <button onclick="scrollToSection('intro')" class="w-full text-left px-4 py-3 rounded-lg text-sm text-slate-600 hover:bg-slate-50 transition-all nav-item" id="nav-intro">
+                🔰 はじめに
+            </button>
+            <button onclick="scrollToSection('red-zone')" class="w-full text-left px-4 py-3 rounded-lg text-sm text-rose-600 hover:bg-rose-50 transition-all nav-item font-medium" id="nav-red-zone">
+                🛑 絶対遵守事項 (BAN)
+            </button>
+            <button onclick="scrollToSection('admin')" class="w-full text-left px-4 py-3 rounded-lg text-sm text-slate-600 hover:bg-slate-50 transition-all nav-item" id="nav-admin">
+                ⚖️ 運営権限と制裁
+            </button>
+            <button onclick="scrollToSection('yellow-zone')" class="w-full text-left px-4 py-3 rounded-lg text-sm text-amber-600 hover:bg-amber-50 transition-all nav-item font-medium" id="nav-yellow-zone">
+                🤝 プレイスタイル
+            </button>
+            <button onclick="scrollToSection('noblesse')" class="w-full text-left px-4 py-3 rounded-lg text-sm text-indigo-600 hover:bg-indigo-50 transition-all nav-item font-medium" id="nav-noblesse">
+                ⚖️ 特権利用の誓約
+            </button>
+            <button onclick="scrollToSection('system')" class="w-full text-left px-4 py-3 rounded-lg text-sm text-slate-600 hover:bg-slate-50 transition-all nav-item" id="nav-system">
+                📦 システム・著作権
+            </button>
+            <button onclick="scrollToSection('viewer')" class="w-full text-left px-4 py-3 rounded-lg text-sm text-slate-600 hover:bg-slate-50 transition-all nav-item" id="nav-viewer">
+                📺 視聴者ガイドライン
+            </button>
+            <button onclick="scrollToSection('exception')" class="w-full text-left px-4 py-3 rounded-lg text-sm text-slate-500 hover:bg-slate-50 transition-all nav-item" id="nav-exception">
+                📝 その他・例外
+            </button>
+        </nav>
+        
+        <div class="p-4 mt-auto border-t border-slate-100">
+            <div class="text-xs text-slate-400 text-center">
+                ※正式な同意手続きはDiscordにて行ってください。
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-grow p-4 md:p-8 max-w-4xl mx-auto space-y-12 pb-24">
+
+        <!-- Intro Section -->
+        <section id="intro" class="scroll-mt-8">
+            <div class="bg-indigo-900 text-white p-8 rounded-2xl shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-8 opacity-10 text-9xl">🏫</div>
+                <h2 class="text-3xl font-bold mb-4">一夜限りの青春を作るために。</h2>
+                <p class="text-indigo-100 leading-relaxed mb-6">
+                    本イベントは、独自技術とMinecraftを用いたメタバース空間で作り上げる大規模プロジェクトです。<br>
+                    全員が安心して楽しむための「校則」をここに定めます。
+                </p>
+                <div class="bg-indigo-800/50 p-4 rounded-lg border border-indigo-700">
+                    <h3 class="font-bold text-yellow-400 mb-2">⚠️ 適用範囲について</h3>
+                    <p class="text-sm text-indigo-200">
+                        本規約は<span class="font-bold text-white">「生徒（参加者）」および「来場者」</span>にのみ適用されます。<br>
+                        運営チーム（教員スタッフ等）は、演出・治安維持のためにこれらの制限を受けず、特権を行使する権利を有します。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Red Zone (Chapter 1) -->
+        <section id="red-zone" class="scroll-mt-8">
+            <div class="flex items-center gap-3 mb-6 border-b-2 border-rose-100 pb-2">
+                <span class="text-3xl">🛑</span>
+                <h2 class="text-2xl font-bold text-rose-700">第1章：絶対遵守事項 (Immediate BAN)</h2>
+            </div>
+            <p class="text-slate-600 mb-6">
+                ここに記載された事項は「レッドカード」です。違反した場合、事前の通告なく<span class="font-bold text-rose-600">即時BAN（永久追放）</span>等の措置が執行される可能性があります。
+            </p>
+
+            <div class="grid gap-4">
+                <!-- Card 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-rose-500">
+                    <h3 class="font-bold text-lg text-slate-800 mb-2">1. 信用毀損・名誉毀損行為の完全禁止</h3>
+                    <p class="text-sm text-slate-600 mb-3">
+                        本企画、運営、他参加者の社会的評価を下げる言動は、<span class="font-bold text-rose-600">企画内外（SNS、裏垢、他鯖）を問わず</span>処分の対象となります。
+                    </p>
+                    <ul class="list-disc list-inside text-xs text-slate-500 bg-rose-50 p-3 rounded">
+                        <li>デマの流布、人格攻撃。</li>
+                        <li>「運営の不手際」や「不満」を過度に誇張して拡散するネガティブキャンペーン。</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-rose-500">
+                    <h3 class="font-bold text-lg text-slate-800 mb-2">2. ハラスメント・迷惑行為</h3>
+                    <ul class="space-y-2 text-sm text-slate-600">
+                        <li><span class="font-bold text-slate-700">差別・誹謗中傷:</span> 人種、性別、信条への攻撃。</li>
+                        <li><span class="font-bold text-slate-700">セクハラ:</span> 執拗な接触、性的言動。</li>
+                        <li><span class="font-bold text-slate-700">プラットフォーム規約違反:</span> YouTube/Twitch等のToSに抵触するスキンや発言。（チャンネルBANリスクへの配慮）</li>
+                        <li><span class="font-bold text-slate-700">ストーキング:</span> 拒絶後の付きまとい、<span class="bg-rose-100 px-1 rounded">配信外での連絡強要</span>。</li>
+                    </ul>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-rose-500">
+                    <h3 class="font-bold text-lg text-slate-800 mb-2">3. 運営妨害・システム悪用</h3>
+                    <div class="grid md:grid-cols-2 gap-4 text-sm text-slate-600">
+                        <div>
+                            <h4 class="font-bold text-slate-700">運営妨害</h4>
+                            <p>指示無視、暴言、リスナーへのファンネル行為（攻撃扇動）。</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-700">システム破壊</h4>
+                            <p>チートツール、ラグマシン、DDoS、バグの悪用。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Admin & Sanctions (Chapter 2) -->
+        <section id="admin" class="scroll-mt-8">
+            <div class="flex items-center gap-3 mb-6 border-b-2 border-slate-200 pb-2">
+                <span class="text-3xl">⚖️</span>
+                <h2 class="text-2xl font-bold text-slate-700">第2章：運営権限と制裁措置</h2>
+            </div>
+            <p class="text-slate-600 mb-6">
+                本企画の秩序を守るため、運営は強力な権限を行使します。処分の判断は全て運営の裁量に委ねられます。
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
+                    <h3 class="font-bold text-slate-800 mb-4">制裁レベルの定義</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-2">
+                            <span class="bg-yellow-400 text-white text-xs px-2 py-1 rounded font-bold mt-0.5">Timeout</span>
+                            <span>一時的な行動制限。反省を促すための謹慎処分。</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="bg-orange-500 text-white text-xs px-2 py-1 rounded font-bold mt-0.5">Event BAN</span>
+                            <span>本企画（2026）への参加資格剥奪。期間中の再入場不可。</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="bg-red-600 text-white text-xs px-2 py-1 rounded font-bold mt-0.5">Permanent BAN</span>
+                            <span>放らぼ主催の全イベント・コミュニティからの永久追放。</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Visualization Choice: Chart.js to explain the warn system -->
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col items-center">
+                    <h3 class="font-bold text-slate-800 mb-2">警告システム (/warn)</h3>
+                    <div class="chart-container">
+                        <canvas id="banChart"></canvas>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-2 text-center">累積3回でシステムが自動的にBANを執行します。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Yellow Zone (Chapter 3) -->
+        <section id="yellow-zone" class="scroll-mt-8">
+            <div class="flex items-center gap-3 mb-6 border-b-2 border-amber-100 pb-2">
+                <span class="text-3xl">🤝</span>
+                <h2 class="text-2xl font-bold text-amber-700">第3章：プレイスタイル・マナー</h2>
+            </div>
+            
+            <div class="bg-amber-50 p-6 rounded-xl border border-amber-200 mb-6">
+                <h3 class="font-bold text-amber-900 mb-2 flex items-center">
+                    <span class="mr-2">🎬</span> ロールプレイの原則
+                </h3>
+                <ul class="list-disc list-inside text-sm text-amber-900 space-y-2">
+                    <li><strong>「生徒」になりきる:</strong> メタ発言は控えめに。世界観を大切に。</li>
+                    <li><strong>初対面設定:</strong> 知り合いでも「クラスメイト」として接する。</li>
+                    <li><strong>恋愛禁止:</strong> <span class="bg-white px-1 rounded font-bold text-rose-500">カップル成立等の恋愛RPは全面禁止</span>です。清らかな交際を。</li>
+                </ul>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm">
+                    <h4 class="font-bold text-slate-700 mb-2">📹 配信・録画の義務 (常時REC)</h4>
+                    <p class="text-sm text-slate-600">
+                        自衛のため、プレイ中は<span class="font-bold">原則として常に録画・配信</span>を行ってください。トラブル時の証拠がない場合、救済できません。
+                    </p>
+                </div>
+                <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm">
+                    <h4 class="font-bold text-slate-700 mb-2">🎭 際どいRPと事前合意</h4>
+                    <p class="text-sm text-slate-600">
+                        対立、裏切り、過度なイジり等は、必ず<span class="font-bold">裏で事前に合意形成</span>を行ってください。合意なき敵対は「荒らし」です。
+                    </p>
+                </div>
+                <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm col-span-2 md:col-span-2">
+                    <h4 class="font-bold text-slate-700 mb-2">🔥 エンジョイ精神</h4>
+                    <p class="text-sm text-slate-600">
+                        PvP等のイベントでは、勝利（キルムーブ）よりも「その場の盛り上がり」を優先してください。魅せるプレイを！
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Noblesse Oblige (Chapter 4) -->
+        <section id="noblesse" class="scroll-mt-8">
+            <div class="bg-gradient-to-r from-indigo-50 to-blue-50 p-8 rounded-2xl border border-indigo-100 text-center">
+                <span class="text-4xl block mb-2">⚖️</span>
+                <h2 class="text-2xl font-bold text-indigo-900 mb-4">第4章：特権利用に関する誓約</h2>
+                <p class="text-indigo-800 font-serif italic mb-6">"Noblesse Oblige"（高貴なる者の義務）</p>
+                
+                <div class="text-left bg-white p-6 rounded-xl shadow-sm max-w-2xl mx-auto">
+                    <p class="text-sm text-slate-600 mb-4">
+                        コマンドや特殊Modなどの強大な力は、あなたの「良心」と「信頼」の上に成り立っています。
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <span class="text-rose-500 font-bold">❌ Bad</span>
+                            <p class="text-sm text-slate-600">私利私欲のために使う（金策短縮、PvPでの不正勝利）。</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-emerald-500 font-bold">⭕️ Good</span>
+                            <p class="text-sm text-slate-600">「誰かを楽しませる」「凄い演出を作る」ために使う。</p>
+                        </div>
+                        <div class="bg-slate-100 p-3 rounded text-xs text-slate-500">
+                            ※操作ミスで事故が起きたら、隠さずすぐに報告してください。正直な報告にはペナルティはありません。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- System & Viewer (Chapter 5, 6) -->
+        <section id="system" class="scroll-mt-8">
+            <h2 class="text-xl font-bold text-slate-700 mb-4 border-b pb-2">📦 システム・著作権・視聴者対応</h2>
+            
+            <div class="space-y-6">
+                <!-- Beta Disclaimer -->
+                <div class="bg-slate-50 p-4 rounded-lg text-sm text-slate-600">
+                    <h4 class="font-bold text-slate-800 mb-1">ベータ版システムについて</h4>
+                    <p>独自Modは開発中です。予期せぬバグ、データ巻き戻り、アイテム消失が発生する可能性があります。運営は補償義務を負いません。「形あるものはいつか壊れる」精神でお願いします。</p>
+                </div>
+
+                <!-- Copyright -->
+                <div class="bg-slate-50 p-4 rounded-lg text-sm text-slate-600">
+                    <h4 class="font-bold text-slate-800 mb-1">著作権と配信許諾</h4>
+                    <p>配信・動画化・収益化は自由です。他視点への映り込みに同意したものとみなします。BGM（AVC/メディアプレイヤー含む）の権利処理は各自で行ってください。</p>
+                </div>
+
+                <!-- Viewer Guidelines (Copy Tool) -->
+                <div id="viewer" class="bg-white border-2 border-indigo-100 p-6 rounded-xl shadow-lg relative scroll-mt-20">
+                    <span class="absolute top-0 right-0 bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-bl-lg font-bold">Must Include</span>
+                    <h3 class="text-lg font-bold text-indigo-900 mb-2">📺 視聴者へのマナー周知義務</h3>
+                    <p class="text-sm text-slate-600 mb-4">
+                        以下のテンプレートを、配信の概要欄や固定コメントに必ず掲示してください。
+                    </p>
+                    
+                    <div class="bg-slate-800 text-slate-300 p-4 rounded-lg font-mono text-xs relative group">
+                        <pre id="viewer-template" class="whitespace-pre-wrap">
+■ 放らぼ文化祭 視聴者ガイドライン
+本企画を楽しむために、以下の「お・ひ・た・し」を守ってご視聴ください。
+【お】お気持ちコメントをしない（批判・説教・自治厨NG）
+【ひ】秘密をバラさない（他視点の情報を書く「鳩行為」NG）
+【た】他人の関係を強要しない（「〇〇と付き合って」等のコメントNG）
+【し】指示を出さない（求められていないアドバイス・指示厨NG）
+
+ここは「学校」という舞台です。
+映画やドラマを見るような気持ちで、生徒たちの物語を見守ってください。</pre>
+                        <button onclick="copyTemplate()" class="absolute top-2 right-2 bg-indigo-600 hover:bg-indigo-500 text-white text-xs px-3 py-1.5 rounded transition-all shadow-md active:scale-95 flex items-center gap-1">
+                            <span>📋</span> コピーする
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exception & Update (Chapter 7) -->
+        <section id="exception" class="scroll-mt-8">
+            <h2 class="text-xl font-bold text-slate-700 mb-4 border-b pb-2">📝 その他・例外条項</h2>
+            <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
+                <div class="space-y-4">
+                    <div>
+                        <h3 class="font-bold text-slate-800 mb-1">包括的禁止事項（常識的判断）</h3>
+                        <p class="text-sm text-slate-600">
+                            本規約に明記されていない事項であっても、<span class="font-bold">「一般常識」や「社会通念」から著しく逸脱する行為や言動</span>は禁止とします。
+                            ルールの隙間を突くような行為も、運営判断で処分の対象となります。
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800 mb-1">規約の改定について</h3>
+                        <p class="text-sm text-slate-600">
+                            運営は、必要に応じて<span class="font-bold">事前の予告なく本規約を変更・改定する権利</span>を有します。
+                            変更後の規約は、Discordでの告知をもって即時効力を発揮します。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Area -->
+        <footer class="pt-12 pb-12 text-center text-slate-400 text-xs">
+            <p>© 2026 放らぼ文化祭実行委員会</p>
+            <p class="mt-2">本ページは参加者向けハンドブック（要約版）です。<br>正式な同意手続きはDiscordサーバーにて行ってください。</p>
+        </footer>
+
+    </main>
+
+    <!-- Scripts -->
+    <script>
+        // Smooth Scroll
+        function scrollToSection(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                // Highlight Nav
+                document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('nav-active'));
+                const navId = 'nav-' + (id === 'intro' ? 'intro' : id); 
+                const navEl = document.getElementById(navId);
+                if(navEl) navEl.classList.add('nav-active');
+            }
+        }
+
+        // Copy Function
+        function copyTemplate() {
+            const text = document.getElementById('viewer-template').innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                alert('概要欄用テンプレートをコピーしました！');
+            });
+        }
+
+        // Chart.js for Warning System
+        window.addEventListener('load', function() {
+            const ctx = document.getElementById('banChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Warning 1 (Mute/Slow)', 'Warning 2 (Mute/Slow)', 'BAN (Auto-Execute)'],
+                    datasets: [{
+                        data: [1, 1, 1],
+                        backgroundColor: [
+                            '#fcd34d', // Amber 300
+                            '#f59e0b', // Amber 500
+                            '#e11d48'  // Rose 600
+                        ],
+                        borderWidth: 0,
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom' },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.label;
+                                }
+                            }
+                        }
+                    },
+                    cutout: '70%'
+                }
+            });
+        });
+    </script>
+</body>
+</html>
